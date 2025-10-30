@@ -1,0 +1,15 @@
+
+/* Eigene Akzente für Die Plotteria */
+:root {
+  --brand: #b40000;
+}
+.navbar .btn { --bs-btn-bg: var(--brand); --bs-btn-border-color: var(--brand); }
+.btn-danger { --bs-btn-bg: var(--brand); --bs-btn-border-color: var(--brand); }
+.btn-outline-danger { --bs-btn-color: var(--brand); --bs-btn-border-color: var(--brand); }
+
+/* Hero mit optionaler Holzoptik – lege dafür eine Datei assets/wood.jpg ab */
+.hero-wood {
+  background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url('assets/wood.jpg');
+  background-size: cover;
+  background-position: center;
+}
