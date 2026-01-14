@@ -1,15 +1,57 @@
+@font-face { font-family: 'DolceVita'; src: url('fonts/DolceVita.ttf'); }
+@font-face { font-family: 'YoshiFont'; src: url('fonts/Yoshi.ttf'); }
 
-/* Eigene Akzente für Die Plotteria */
-:root {
-  --brand: #b40000;
+body {
+    font-family: 'DolceVita', sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: #000;
 }
-.navbar .btn { --bs-btn-bg: var(--brand); --bs-btn-border-color: var(--brand); }
-.btn-danger { --bs-btn-bg: var(--brand); --bs-btn-border-color: var(--brand); }
-.btn-outline-danger { --bs-btn-color: var(--brand); --bs-btn-border-color: var(--brand); }
 
-/* Hero mit optionaler Holzoptik – lege dafür eine Datei assets/wood.jpg ab */
-.hero-wood {
-  background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url('assets/wood.jpg');
-  background-size: cover;
-  background-position: center;
+.yoshi { font-family: 'YoshiFont', cursive; font-size: 2.5rem; }
+
+header {
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
 }
+
+.main-logo { max-width: 300px; margin-bottom: 20px; }
+
+nav { margin-bottom: 20px; }
+
+.filter-btn {
+    background: none; border: none; padding: 10px 20px;
+    font-family: 'DolceVita'; cursor: pointer; text-transform: uppercase;
+    letter-spacing: 1px; transition: 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active { border-bottom: 2px solid #000; }
+
+.container { padding: 20px; max-width: 1200px; margin: auto; }
+
+/* Galerie Layout */
+.gallery { display: flex; flex-wrap: wrap; margin: 10px -16px; }
+.column { float: left; width: 33.33%; display: none; padding: 16px; box-sizing: border-box; }
+.show { display: block; }
+
+.content {
+    background-color: #fff; padding: 10px;
+    border: 1px solid #f0f0f0; text-align: center;
+    transition: 0.3s;
+}
+
+.content:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+.mail-btn {
+    display: block; background: #000; color: #fff;
+    padding: 10px; text-decoration: none; margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+footer { text-align: center; padding: 80px 20px; background: #fafafa; }
+.insta-link { font-weight: bold; color: #000; text-decoration: none; border-bottom: 1px solid #000; }
+
+/* Mobile Optimierung */
+@media screen and (max-width: 800px) { .column { width: 50%; } }
+@media screen and (max-width: 600px) { .column { width: 100%; } }
