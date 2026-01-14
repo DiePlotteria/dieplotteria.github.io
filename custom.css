@@ -1,57 +1,169 @@
-@font-face { font-family: 'DolceVita'; src: url('fonts/DolceVita.ttf'); }
-@font-face { font-family: 'YoshiFont'; src: url('fonts/Yoshi.ttf'); }
+/* Schriftarten einbinden */
+@font-face {
+    font-family: 'DolceVita';
+    src: url('fonts/DolceVita.ttf');
+}
+@font-face {
+    font-family: 'YoshiFont';
+    src: url('fonts/Yoshi.ttf');
+}
 
 body {
     font-family: 'DolceVita', sans-serif;
     margin: 0;
+    padding: 0;
     background-color: #ffffff;
-    color: #000;
+    color: #333;
+    line-height: 1.6;
 }
 
-.yoshi { font-family: 'YoshiFont', cursive; font-size: 2.5rem; }
+/* Yoshi Font für die handschriftlichen Akzente */
+.yoshi, h2 {
+    font-family: 'YoshiFont', cursive;
+    font-weight: normal;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
 header {
-    padding: 40px 20px;
+    padding: 60px 20px 40px 20px;
     text-align: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f2f2f2;
 }
 
-.main-logo { max-width: 300px; margin-bottom: 20px; }
+.main-logo {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
 
-nav { margin-bottom: 20px; }
+/* Navigation & Filter */
+nav {
+    margin-top: 20px;
+}
 
 .filter-btn {
-    background: none; border: none; padding: 10px 20px;
-    font-family: 'DolceVita'; cursor: pointer; text-transform: uppercase;
-    letter-spacing: 1px; transition: 0.3s;
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'DolceVita', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    color: #888;
 }
 
-.filter-btn:hover, .filter-btn.active { border-bottom: 2px solid #000; }
+.filter-btn:hover, .filter-btn.active {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
 
-.container { padding: 20px; max-width: 1200px; margin: auto; }
+/* Galerie & Layout */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
 
-/* Galerie Layout */
-.gallery { display: flex; flex-wrap: wrap; margin: 10px -16px; }
-.column { float: left; width: 33.33%; display: none; padding: 16px; box-sizing: border-box; }
-.show { display: block; }
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.column {
+    width: 33.333%;
+    display: none; /* Wird via JS gesteuert */
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.show {
+    display: block;
+}
 
 .content {
-    background-color: #fff; padding: 10px;
-    border: 1px solid #f0f0f0; text-align: center;
-    transition: 0.3s;
+    background-color: #fff;
+    padding: 0 0 20px 0;
+    border: 1px solid #eee;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.content:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.content:hover {
+    transform: translateY(-5px);
+}
+
+.content img {
+    margin-bottom: 15px;
+}
+
+.content h4 {
+    margin: 15px 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.desc {
+    font-size: 0.85rem;
+    color: #666;
+    padding: 0 15px;
+}
 
 .mail-btn {
-    display: block; background: #000; color: #fff;
-    padding: 10px; text-decoration: none; margin-top: 10px;
-    font-size: 0.8rem;
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    transition: background 0.3s;
 }
 
-footer { text-align: center; padding: 80px 20px; background: #fafafa; }
-.insta-link { font-weight: bold; color: #000; text-decoration: none; border-bottom: 1px solid #000; }
+.mail-btn:hover {
+    background: #444;
+}
 
-/* Mobile Optimierung */
-@media screen and (max-width: 800px) { .column { width: 50%; } }
-@media screen and (max-width: 600px) { .column { width: 100%; } }
+/* Footer mit quadratischem Logo */
+footer {
+    text-align: center;
+    padding: 80px 20px;
+    background: #fcfcfc;
+    border-top: 1px solid #eee;
+}
+
+.footer-logo img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.insta-link {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+}
+
+.footer-info {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Mobile Anpassung */
+@media screen and (max-width: 900px) {
+    .column { width: 50%; }
+}
+
+@media screen and (max-width: 600px) {
+    .column { width: 100%; }
+    .main-logo { max-width: 250px; }
+}
