@@ -615,3 +615,52 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-top: 1px solid #f0f0f0;
     padding-top: 5px;
 }
+
+/* Mobile Optimierung für große Texte */
+@media (max-width: 600px) {
+    h1, h2, .yoshi, .mix-title {
+        font-size: 2.5rem !important; /* Verkleinert die Schrift auf Handys */
+        line-height: 1.2;
+        word-wrap: break-word; /* Verhindert das Herausschießen */
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Speziell für den "Moment" oder "Produkte" Schriftzug */
+    .yoshi, h2 span {
+        font-size: 3rem !important; /* Etwas größer als der Rest, aber im Rahmen */
+    }
+}
+
+@media (max-width: 600px) {
+    .slider-track {
+        gap: 10px; /* Weniger Abstand zwischen den Karten */
+        padding: 10px;
+    }
+
+    .product-card {
+        min-width: 85vw; /* Karte ist 85% der Bildschirmbreite groß */
+        margin: 0 auto;
+    }
+
+    .product-specs {
+        padding-left: 20px; /* Damit die Punkte nicht am Rand kleben */
+        text-align: left;
+    }
+    
+    /* Falls die Pfeile auf dem Handy im Weg sind, blenden wir sie aus */
+    .arrow {
+        display: none !important; 
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 40px 15px; /* Mehr Platz zu den Rändern */
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+    }
+}
