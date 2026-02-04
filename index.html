@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIE Plotteria | Geschenke & Plottermoments</title>
     <link rel="icon" type="image/png" href="Logo_Quadrat.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,50 +14,450 @@
     <div class="logo-container">
         <img src="Logo_Lang.png" alt="DIE Plotteria" class="main-logo">
     </div>
-    <!-- EDIT: Navigation einblenden sobald benötigt! 
-    <nav>
-        <button class="filter-btn active" onclick="filterSelection('all')">Alles</button>
-        <button class="filter-btn" onclick="filterSelection('produkte')">Produkte</button>
-        <button class="filter-btn" onclick="filterSelection('moments')">Plottermoments</button>
-        <button class="filter-btn" onclick="filterSelection('kontakt')">Kontakt</button>
+    <nav class="main-nav">
+        <a href="#moments">Plottermoments</a>
+        <a href="#produkte">Shop</a>
+        <a href="#kontakt">Kontakt</a>
     </nav>
-     -->
 </header>
 
 <main class="container">
-    <div class="gallery">
+    
+
+    <section id="moments" class="page-section">
+        <h2 class="mix-title">Deine <span class="yoshi">Plottermoments</span></h2>
         
-        <div class="column produkte">
-            <div class="content">
-                <img src="images/produkt-beispiel.jpg" alt="Beplottetes Geschenk" style="width:100%">
-                <h4>Beplottete Kostbarkeit</h4>
-                <p>Ab 15,00 €</p>
-                <p class="desc">Details zum Produkt und zur Personalisierung.</p>
-                <a href="mailto:hallo@dieplotteria.de?subject=Anfrage: Produkt" class="mail-btn">Per Mail anfragen</a>
+        <div class="moments-intro-text">
+            <p><strong>Was ist eigentlich ein Plottermoment?</strong> <br> 
+                Mehr als ein Bastelkurs – es ist ein kreatives DIY-Erlebnis 
+                für Euch! 
+                Wir verwandeln dein Wohnzimmer oder deine Wunschlocation 
+                in eine mobile Werkstatt. Das Gute: Wir bringen alles mit, was ihr braucht 
+                – von den Geräten über eine riesige Folienauswahl bis hin zu den hochwertigen Rohlingen. <br>
+                Ihr braucht absolut keine Vorkenntnisse: Egal ob Bastelanfänger oder DIY-Queen, 
+                wir begleiten euch Schritt für Schritt vom Design bis zum fertigen Produkt. 
+            </p>
+        </div>
+
+        
+        <div class="moments-container">
+            <div class="moments-container">
+
+    <div class="accordion-item">
+        <button class="accordion-header"><span>Babyparty</span><span class="icon">+</span></button>
+        <div class="accordion-content">
+            <div class="acc-inner">
+                <div class="package-header-row">
+                    <p>Dauer: 60-90 Min</p>
+                    <p class="price-right">Grundgebühr: 99 € (für 4 Gäste + Mama)</p>
+                </div>
+                <hr class="acc-divider">
+                <div class="package-info-grid">
+                    <div class="info-block">
+                        <strong>Inklusive:</strong>
+                        <ul>
+                            <li>1 Rohling pro Gast</li>
+                            <li>Werdende Mama ist kostenfrei</li>
+                            <li>Vor Ort Plotten nach euren Wünschen</li>
+                            <li>Individuelle Bügelbilder</li>
+                            <li>Material & Betreuung</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <strong>Optional:</strong>
+                        <p>Weitere Rohlinge auf Vorbestellung möglich.</p>
+                    </div>
+                </div>
+                <hr class="acc-divider">
+                <div class="package-footer-column">
+                    <div class="p-note"><strong>Anmerkungen</strong> Mindestteilnehmer 5 Personen. Andere Textilien frei wählbar.</div>
+                    <div class="p-extra-info-text">Jede weitere Person: 13 €</div>
+                </div>
+                <br>
+                <a href="mailto:info@dieplotteria.de?subject=Anfrage: Babyparty Moment&body=Hej Plotteria-Team,%0D%0A%0D%0Aich habe Interesse an einer Babyparty bei uns vor Ort.%0D%0A%0D%0AWunschdatum: %0D%0AAnzahl Personen: %0D%0AOrt: %0D%0A%0D%0Aich freue mich auf eure Rückmeldung!" class="mail-btn">Diesen Moment anfragen</a>
+            </div>
+        </div>
+    </div>
+
+  <div class="accordion-item">
+        <button class="accordion-header"><span>JGA Fieber</span><span class="icon">+</span></button>
+        <div class="accordion-content">
+            <div class="acc-inner">
+                <div class="package-header-row">
+                    <p>Dauer: 60-120 Min</p>
+                    <p class="price-right">Grundgebühr: 99 € (für 4 Gäste + Braut)</p>
+                </div>
+                <hr class="acc-divider">
+                <div class="package-info-grid">
+                    <div class="info-block">
+                        <strong>Inklusive:</strong>
+                        <ul>
+                            <li>Ein kleines Überraschungsgeschenk p.P.</li>
+                            <li>Braut ist kostenfrei</li>
+                            <li>Vor Ort Plotten nach euren Wünschen</li>
+                            <li>Material & Betreuung</li>
+                        </ul>
+                    </div>
+                     <div class="info-block">
+                        <strong>Eure Rohlinge:</strong>
+                        <p>Bei diesem Paket sind keine Rohlinge inklusive. Bitte sucht euch eure Wunsch-Teile vorab aus unserer Liste aus (z.B. T-Shirts, Jute Shopper, Weingläser) wir bringen Sie dann zum Event mit.</p>
+                    </div>
+                </div>
+                <hr class="acc-divider">
+                <div class="package-footer-column">
+                    <div class="p-note"><strong>Anmerkungen</strong> Mindestteilnehmer 5 Personen. Andere Textilien jederzeit frei wählbar.</div>
+                    <div class="p-extra-info-text">Jede weitere Person: 10 €</div>
+                </div>
+                <br>
+                <a href="mailto:info@dieplotteria.de?subject=Anfrage: JGA Moment&body=Hej Plotteria-Team,%0D%0A%0D%0Aich möchte einen JGA bei euch anfragen.%0D%0A%0D%0AWunschdatum: %0D%0AAnzahl Personen: %0D%0AOrt: %0D%0A%0D%0Aich freue mich auf eure Rückmeldung!" class="mail-btn">Diesen Moment anfragen</a>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <div class="accordion-item">
+        <button class="accordion-header"><span>DIY Traum</span><span class="icon">+</span></button>
+        <div class="accordion-content">
+            <div class="acc-inner">
+                <div class="package-header-row">
+                    <p>Dauer: 60-120 Min</p>
+                    <p class="price-right">Grundgebühr: 99 € (für 5 Personen)</p>
+                </div>
+                <hr class="acc-divider">
+                <div class="package-info-grid">
+                    <div class="info-block">
+                        <strong>Inklusive:</strong>
+                        <ul>
+                            <li>Ein kleines Überraschungsgeschenk p.P.</li>
+                            <li>Materialien zum Beplotten</li>
+                            <li>Vor Ort Plotten nach euren Wünschen</li>
+                            <li>Material & Betreuung</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <strong>Eure Rohlinge:</strong>
+                        <p>Bei diesem Paket sind keine Rohlinge inklusive. Bitte sucht euch eure Wunsch-Teile vorab aus unserer Liste aus (z.B. T-Shirts, Jute Shopper, Weingläser) wir bringen Sie dann zum Event mit.</p>
+                    </div>
+                </div>
+                <hr class="acc-divider">
+                <div class="package-footer-column">
+                    <div class="p-note"><strong>Anmerkungen</strong> Mindestteilnehmer 5 Personen. Andere Textilien jederzeit frei wählbar.</div>
+                    <div class="p-extra-info-text">Jede weitere Person: 10 €</div>
+                </div>
+                <br>
+                <a href="mailto:info@dieplotteria.de?subject=Anfrage: DIY Traum Moment&body=Hej Plotteria-Team,%0D%0A%0D%0Aich habe Interesse an einem DIY Traum Abend.%0D%0A%0D%0AWunschdatum: %0D%0AAnzahl Personen: %0D%0AOrt: %0D%0A%0D%0Aich freue mich auf eure Rückmeldung!" class="mail-btn">Diesen Moment anfragen</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header"><span>Kindergeburtstag (Kids Creative)</span><span class="icon">+</span></button>
+        <div class="accordion-content">
+            <div class="acc-inner">
+                <div class="package-header-row">
+                    <p>Dauer: 45-90 Min</p>
+                    <p class="price-right">Grundgebühr: 99 € (für 4 Kinder + Geburtstagskind)</p>
+                </div>
+                <hr class="acc-divider">
+                <div class="package-info-grid">
+                    <div class="info-block">
+                        <strong>Inklusive:</strong>
+                        <ul>
+                            <li>Ein weißes T-Shirt pro Kind</li>
+                            <li>Ein kleines Überraschungsgeschenk p.P.</li>
+                            <li>Süße Bügelbilder individuell erstellt nach eurem Wunsch </li>  
+                            <li>Geburtstagskind ist kostenfrei</li>
+                            <li>Vor Ort Plotten nach euren Wünschen</li>
+                            <li>Material & Betreuung</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <strong>Optional:</strong>
+                        <p>Andere Rohlinge auf Vorbestellung jederzeit möglich.</p>
+                    </div>
+                </div>
+                <hr class="acc-divider">
+                <div class="package-footer-column">
+                    <div class="p-note"><strong>Anmerkungen</strong> Mindestteilnehmer 5 Personen.</div>
+                    <div class="p-extra-info-text">Jede weitere Person: 10 €</div>
+                </div>
+                <br>
+                <a href="mailto:info@dieplotteria.de?subject=Anfrage: Kindergeburtstag Moment&body=Hej Plotteria-Team,%0D%0A%0D%0Aich plane einen Kindergeburtstag mit euch.%0D%0A%0D%0AWunschdatum: %0D%0AAnzahl Personen: %0D%0AOrt: %0D%0A%0D%0Aich freue mich auf eure Rückmeldung!" class="mail-btn">Diesen Moment anfragen</a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+       
+
+
+        </div>
+
+    <div class="policy-container">
+        <div class="policy-box">
+            <h4>🚗 Anfahrt</h4>
+            <p>Innerhalb von 10km kostenlos. <br>Darüber hinaus 0,30 € pro KM.</p>
+        </div>
+        <div class="policy-box">
+            <h4>📅 Stornierung</h4>
+            <p>Bis 30 Tage vorher: Kostenfrei <br>Ab 14 Tage vorher: 50% der Gebühr</p>
+        </div>
+    </div>
+    </section>
+
+    <section id="anfrage" class="page-section">
+    <div class="container">
+        <h2 class="mix-title">Deinen <span class="yoshi">Moment</span> buchen</h2>
+        <p class="section-intro" style="text-align: center; margin-bottom: 30px;">
+            Bereit für dein Event? Schick uns deine unverbindliche Anfrage!
+        </p>
+        
+        <div class="contact-container">
+           
+           <form action="https://formspree.io/f/xkoojyqq" method="POST" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Dein Name" required>
+                    <input type="email" name="email" placeholder="Deine E-Mail" required>
+                </div>
+                
+                <div class="form-group">
+                    <select name="paket" required>
+                        <option value="" disabled selected>Wähle dein Paket</option>
+                        <option value="Mini Moment">JGA Fieber</option>
+                        <option value="Kreativ Moment">Kids Creative</option>
+                        <option value="Premium Moment">DIY Traum</option>
+                        <option value="Premium Moment">Babyparty</option>
+                        <option value="Individuell">Individuelle Anfrage</option>
+                    </select>
+                    <input type="number" name="gaeste" placeholder="Anzahl Gäste (ca. 3-8)">
+                </div>
+
+                <div class="form-group">
+                    <input type="date" name="datum" placeholder="Wunschdatum">
+                    <input type="text" name="ort" placeholder="Ort des Events">
+                </div>
+
+                <textarea name="nachricht" rows="4" placeholder="Besondere Wünsche oder Fragen an uns?"></textarea>
+                
+                <button type="submit" class="mail-btn">Event anfragen</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <hr class="divider">
+
+    <section id="faq" class="page-section">
+        <h2 class="mix-title">Häufige <span class="yoshi">Fragen</span></h2>
+        <div class="moments-container">
+            <div class="accordion-item">
+                <button class="accordion-header"><span>Muss ich handwerklich begabt sein?</span><span class="icon">+</span></button>
+                <div class="accordion-content"><div class="acc-inner">Überhaupt nicht! Unsere Events sind so aufgebaut, dass wirklich jeder mitmachen kann. Wir zeigen euch alles in Ruhe</div></div>
+            </div>
+
+            <div class="accordion-item">
+    <button class="accordion-header"><span>Was passiert, wenn wir mehr oder weniger Personen sind?</span><span class="icon">+</span></button>
+    <div class="accordion-content">
+        <div class="acc-inner">
+            <p>
+                <strong>Weniger als 5 Personen:</strong><br>
+                Unsere Pakete basieren auf einer festen Grundgebühr von 99 €, die unsere Vorbereitung, die exklusive Zeit vor Ort und die Bereitstellung des Equipments abdeckt. Ihr könnt das Event natürlich auch mit weniger Personen buchen, der Preis für die Grundgebühr bleibt jedoch bestehen.
+            </p>
+            <br>
+            <p>
+                <strong>Mehr als 12 Personen:</strong><br>
+                Grundsätzlich sind unsere Moments ideal für Gruppen von 6 bis 12 Personen ausgelegt, damit wir jeden optimal betreuen können. Wenn ihr eine größere Gruppe seid, schreibt uns einfach eine kurze Nachricht – wir finden sicher eine individuelle Lösung, um euer Event gemeinsam umzusetzen!
+            </p>
+        </div>
+    </div>
+</div>
+
+            <div class="accordion-item">
+                <button class="accordion-header"><span>Was müssen wir als Gastgeber vorbereiten? </span><span class="icon">+</span></button>
+                <div class="accordion-content"><div class="acc-inner">Wir sind sehr flexibel. Wichtig ist nur, dass wir vor Ort eine stabile Internetverbindung und Strom für unsere Geräte haben. Wie ihr Euer Event gestaltet ist ganz euch überlassen: Mit Sekt, Häppchen oder Knabbereien. Ansonsten müsst ihr nichts mitbringen außer guter Laune!</div></div>
+            </div>
+
+             
+            <div class="accordion-item">
+                <button class="accordion-header"><span>Muss ich kreativ sein?</span><span class="icon">+</span></button>
+                <div class="accordion-content"><div class="acc-inner">Nein! Wir helfen bei der Motivsuche und zeigen euch alle Kniffe.</div></div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header"><span>Wie viele Personen können teilnehmen?</span><span class="icon">+</span></button>
+                <div class="accordion-content"><div class="acc-inner">Ideal sind Gruppen von 5 bis 12 Personen.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+     <section id="produkte" class="page-section">
+        
+        <div class="filter-wrapper">
+            <div class="filter-group">
+                <span class="filter-label">Nach Anlass:</span>
+                <button class="filter-btn active" onclick="filterSelection('all')">Alles</button>
+                <button class="filter-btn" onclick="filterSelection('hochzeit')">Hochzeit</button>
+                <button class="filter-btn" onclick="filterSelection('geburt')">Geburt</button>
+                <button class="filter-btn" onclick="filterSelection('jga')">JGA</button>
+                <button class="filter-btn" onclick="filterSelection('eltern')">Für Eltern</button>
+            </div>
+            <div class="filter-group">
+                <span class="filter-label">Kategorien:</span>
+                <button class="filter-btn" onclick="filterSelection('textil')">Textilien</button>
+                <button class="filter-btn" onclick="filterSelection('accessoires')">Accessoires</button>
+                <button class="filter-btn" onclick="filterSelection('kids')">Baby & Kids</button>
             </div>
         </div>
 
-        <div class="column moments">
-            <div class="content highlight">
-                <img src="images/moments-beispiel.jpg" alt="Plotter Party" style="width:100%">
-                <h4>JGA Plottermoment</h4>
-                <p>Individuelles Paket</p>
-                <p class="desc">Plotter-Spaß für dich und deine Freunde zuhause.</p>
-                <a href="mailto:hallo@dieplotteria.de?subject=Anfrage: Plottermoments" class="mail-btn">Termin anfragen</a>
-            </div>
+        <h2 class="mix-title" style="text-align: center; margin-top: 50px;">Unsere <span class="yoshi">Produkte</span></h2>
+
+<div class="slider-container">
+    <button class="arrow prev" onclick="moveSlider(-1)">&#10094;</button>
+    
+    <div class="slider-track" id="sliderTrack"> 
+
+
+ <!--
+  Babybodies:
+  Kategorien: Geburt und Bodies 
+-->       
+    <div class="product-card geburt kids">
+        <img src="images/Bodies_img/Aus dem Bauch.jpg" alt="Baby Body">
+        <h4>Aus dem Bauch</h4>
+        <div class="product-specs">
+            <span><i class="fas fa-check"></i> 100% Baumwolle</span>
+            <span><i class="fas fa-check"></i>Personalisiert</span>
         </div>
+
+        <p class="description">Individuell beplottet</p>
+        <p class="price">16€</p>
+        <a href="mailto:info@dieplotteria.de?subject=Anfrage: Produkt - Aus dem Bauch&body=Hej Plotteria-Team,%0D%0A%0D%0Aich habe Interesse an dem Baby Body!%0D%0A%0D%0AGröße: %0D%0AName: %0D%0AWunschfarbe Druck: %0D%0A%0D%0AIch freue mich auf eure Rückmeldung!" class="mail-btn">Jetzt anfragen</a>
+    </div>
+
+    <div class="product-card geburt kids">
+        <img src="images/Bodies_img/Crew 2.jpg" alt="Baby Body">
+        <h4>Crew Member</h4>
+        <div class="product-specs">
+            <span><i class="fas fa-check"></i> 100% Baumwolle</span>
+            <span><i class="fas fa-check"></i>Personalisiert</span>
+        </div>
+
+        <p class="description">Individuell beplottet</p>
+        <p class="price">16 €</p>
+        <a href="mailto:info@dieplotteria.de?subject=Anfrage: Produkt - Aus dem Bauch&body=Hej Plotteria-Team,%0D%0A%0D%0Aich habe Interesse an dem Baby Body!%0D%0A%0D%0AGröße: %0D%0AName: %0D%0AWunschfarbe Druck: %0D%0A%0D%0AIch freue mich auf eure Rückmeldung!" class="mail-btn">Jetzt anfragen</a>
+    </div>
+
+    <div class="product-card geburt kids">
+        <img src="images/Bodies_img/GrößtesGlück2.jpg" alt="Baby Body">
+        <h4>Glück</h4>
+        <div class="product-specs">
+            <span><i class="fas fa-check"></i> 100% Baumwolle</span>
+            <span><i class="fas fa-check"></i>Personalisiert</span>
+        </div>
+
+        <p class="description">Individuell beplottet</p>
+        <p class="price">17€</p>
+        <a href="mailto:info@dieplotteria.de?subject=Anfrage: Produkt - Aus dem Bauch&body=Hej Plotteria-Team,%0D%0A%0D%0Aich habe Interesse an dem Baby Body!%0D%0A%0D%0AGröße: %0D%0AName: %0D%0AWunschfarbe Druck: %0D%0A%0D%0AIch freue mich auf eure Rückmeldung!" class="mail-btn">Jetzt anfragen</a>
+    </div>
+
+    <div class="product-card geburt kids">
+        <img src="images/Bodies_img/IMG_9720.JPG" alt="Baby Body">
+        <h4>Kleines Wunder</h4>
+        <div class="product-specs">
+            <span><i class="fas fa-check"></i> 100% Baumwolle</span>
+            <span><i class="fas fa-check"></i>Personalisiert</span>
+        </div>
+
+        <p class="description">Individuell beplottet</p>
+        <p class="price">17€</p>
+        <a href="mailto:info@dieplotteria.de?subject=Anfrage: Produkt - Aus dem Bauch&body=Hej Plotteria-Team,%0D%0A%0D%0Aich habe Interesse an dem Baby Body!%0D%0A%0D%0AGröße: %0D%0AName: %0D%0AWunschfarbe Druck: %0D%0A%0D%0AIch freue mich auf eure Rückmeldung!" class="mail-btn">Jetzt anfragen</a>
+    </div>
+
+    <div class="product-card geburt kids">
+        <img src="images/Bodies_img/Großeltern.jpg" alt="Baby Body">
+        <h4>Frohe Botschaft</h4>
+        <div class="product-specs">
+            <span><i class="fas fa-check"></i> 100% Baumwolle</span>
+            <span><i class="fas fa-check"></i>Personalisiert</span>
+        </div>
+
+        <p class="description">Individuell beplottet</p>
+        <p class="price">17€</p>
+        <a href="mailto:info@dieplotteria.de?subject=Anfrage: Produkt - Aus dem Bauch&body=Hej Plotteria-Team,%0D%0A%0D%0Aich habe Interesse an dem Baby Body!%0D%0A%0D%0AGröße: %0D%0AName: %0D%0AWunschfarbe Druck: %0D%0A%0D%0AIch freue mich auf eure Rückmeldung!" class="mail-btn">Jetzt anfragen</a>
+    </div>
+
+     <div class="product-card geburt kids">
+        <img src="images/Bodies_img/Welcome to the world.jpg" alt="Baby Body">
+        <h4>Welcome</h4>
+        <div class="product-specs">
+            <span><i class="fas fa-check"></i> 100% Baumwolle</span>
+            <span><i class="fas fa-check"></i>Personalisiert</span>
+        </div>
+
+        <p class="description">Individuell beplottet</p>
+        <p class="price">17€</p>
+        <a href="mailto:info@dieplotteria.de?subject=Anfrage: Produkt - Aus dem Bauch&body=Hej Plotteria-Team,%0D%0A%0D%0Aich habe Interesse an dem Baby Body!%0D%0A%0D%0AGröße: %0D%0AName: %0D%0AWunschfarbe Druck: %0D%0A%0D%0AIch freue mich auf eure Rückmeldung!" class="mail-btn">Jetzt anfragen</a>
+    </div>
+
+    
 
     </div>
+
+    <button class="arrow next" onclick="moveSlider(1)">&#10095;</button>
+</div>
+    </section>
+
+    <hr class="divider">
+
+    <section id="instagram" class="page-section">
+        <h2 class="mix-title">Instagram <span class="yoshi">Feed</span></h2>
+        <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-ea30b11b-8ff7-4a9c-a733-ffcc1e266e48" data-elfsight-app-lazy></div>
+
+        <a href="https://instagram.com/dieplotteria" target="_blank" class="mail-btn">Folge uns @dieplotteria</a>
+    </section>
+
 </main>
 
-<footer id="kontakt">
-    <div class="footer-logo">
-        <img src="Logo_Quadratisch.png" alt="DIE Plotteria Siegel">
-    </div>
-    
-    <h2 class="yoshi">Lass uns was Schönes erschaffen</h2>
-    <p>Besuche uns für Inspiration auf Instagram:</p>
-    <a href="https://instagram.com/dieplotteria" class="insta">Folge uns auf Instagram</a>
 
+
+<hr class="divider">
+
+<footer id="kontakt">
+<div class="footer-logo">
+    <img src="Logo_Quadratisch.png" alt="Logo" style="width: 120px; height: auto;">
+</div>    <h2 class="mix-title">Schreib uns <span class="yoshi">einfach</span></h2>
+    
+    <div class="contact-container" style="margin-top: 20px;">
+        <form action="https://formspree.io/f/xkoojyqq" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="E-Mail" required>
+            <textarea name="nachricht" rows="3" placeholder="Deine Nachricht an uns..." required></textarea>
+            <button type="submit" class="mail-btn">Senden</button>
+        </form>
+    </div>
+
+    <div class="contact-box" style="margin-top: 40px;">
+        <p>E-Mail: <a href="mailto:info@dieplotteria.de">info@dieplotteria.de</a></p>
+        <a href="https://instagram.com/dieplotteria" target="_blank">@dieplotteria</a>
+    </div>
+    <div class="footer-info">
+    <p>
+        &copy; 2026 dieplotteria.de | with 🖤 by us |
+        <a href="impressum.html">Impressum</a> | 
+        <a href="datenschutz.html">Datenschutz</a>
+    </p>
+</div>
+</footer>
+
+
+
+<button id="backToTop">↑</button>
+
+<script src="script.js"></script>
 </body>
 </html>

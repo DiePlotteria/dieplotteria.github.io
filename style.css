@@ -1,169 +1,617 @@
-/* Schriftarten einbinden */
-@font-face {
-    font-family: 'DolceVita';
-    src: url('fonts/DolceVita.ttf');
-}
-@font-face {
-    font-family: 'YoshiFont';
-    src: url('fonts/Yoshi.ttf');
-}
+@font-face { font-family: 'DolceVita'; src: url('./fonts/DolceVita.ttf'); }
+@font-face { font-family: 'YoshiFont'; src: url('./fonts/Yoshi.ttf'); }
 
-body {
-    font-family: 'DolceVita', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #333;
-    line-height: 1.6;
-}
+html { scroll-behavior: smooth; scroll-padding-top: 130px; }
+body { font-family: 'Inter', sans-serif; font-weight: 300; margin: 0; color: #333; line-height: 1.8; }
 
-/* Yoshi Font für die handschriftlichen Akzente */
-.yoshi, h2 {
-    font-family: 'YoshiFont', cursive;
-    font-weight: normal;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
+/* Typografie */
+.mix-title { font-family: 'DolceVita', sans-serif; text-transform: uppercase; letter-spacing: 3px; font-size: 2.2rem; text-align: center; }
+.yoshi { font-family: 'YoshiFont', cursive; text-transform: none; font-size: 3.5rem; vertical-align: middle; position: relative; top: 12px; }
 
-header {
-    padding: 60px 20px 40px 20px;
-    text-align: center;
-    border-bottom: 1px solid #f2f2f2;
-}
+header { position: sticky; top: 0; background: white; z-index: 1000; text-align: center; padding: 20px; border-bottom: 1px solid #f5f5f5; }
+.main-logo { max-width: 180px; }
+.main-nav a { font-family: 'DolceVita'; text-decoration: none; color: #000; margin: 0 15px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
 
-.main-logo {
-    max-width: 350px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 30px;
-}
+.container { max-width: 1100px; margin: auto; padding: 20px; }
+.page-section { padding: 80px 0; }
 
-/* Navigation & Filter */
-nav {
-    margin-top: 20px;
-}
+/* Filter Buttons */
+.filter-btn { font-family: 'DolceVita'; background: none; border: none; cursor: pointer; color: #aaa; text-transform: uppercase; font-size: 0.8rem; font-weight: bold; letter-spacing: 1px; }
+.filter-btn.active { color: #000; border-bottom: 2px solid #000; }
 
-.filter-btn {
-    background: none;
-    border: none;
-    padding: 10px 20px;
-    font-family: 'DolceVita', sans-serif;
-    cursor: pointer;
+/* AKKORDEON & PAKET-INFOS (Optimierte Lesbarkeit) */
+.moments-container { max-width: 850px; margin: auto; }
+.accordion-item { border-bottom: 1px solid #eee; margin-bottom: 5px; }
+
+/* Titel bleibt Dolce Vita */
+.accordion-header { 
+    width: 100%; 
+    background: none; 
+    border: none; 
+    padding: 25px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-family: 'DolceVita', sans-serif; 
+    cursor: pointer; 
+    font-size: 1.25rem; 
+    font-weight: bold;
+    letter-spacing: 2px; 
+    text-align: left;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    transition: 0.3s;
-    color: #888;
 }
 
-.filter-btn:hover, .filter-btn.active {
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: #fafafa; }
+.accordion-item.active .accordion-content { max-height: 800px; }
+.acc-inner { padding: 25px 40px; }
+
+/* INFOS IN INTER (Bessere Lesbarkeit) */
+.package-details { 
+    display: flex; 
+    gap: 30px; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 15px; 
+    margin-bottom: 20px; 
+    font-family: 'Inter', sans-serif; /* Geändert zu Inter */
+    font-weight: 600; 
+    font-size: 0.95rem; 
     color: #000;
-    border-bottom: 1px solid #000;
 }
 
-/* Galerie & Layout */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
+.package-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+
+/* Die kleinen Überschriften "INKLUSIVE" und "ROHLINGE" */
+.info-block strong { 
+    display: block; 
+    margin-bottom: 8px; 
+    font-family: 'Inter', sans-serif; /* Geändert zu Inter */
+    font-size: 0.75rem; 
+    font-weight: 800; 
+    color: #888; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
 }
 
-.gallery {
+.info-block ul, .info-block p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #444;
+    margin: 0;
+}
+
+.info-block ul { padding-left: 20px; }
+/* Instagram & Footer */
+.insta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 40px 0; }
+.insta-item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; }
+.mail-btn { display: inline-block; background: #000; color: #fff; padding: 12px 30px; text-decoration: none; font-size: 0.75rem; font-family: 'DolceVita'; font-weight: bold; letter-spacing: 1px; }
+
+
+footer { padding: 80px 20px; text-align: center; background: #fafafa; }
+#backToTop { display: none; position: fixed; bottom: 30px; right: 30px; background: #000; color: #fff; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; z-index: 1001; }
+.divider { border: 0; height: 1px; background: #eee; width: 30%; margin: 60px auto; }
+
+@media (max-width: 768px) {
+    .accordion-header { font-size: 1.1rem; }
+    .package-info-grid { grid-template-columns: 1fr; }
+    .insta-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Kontaktformular Styling */
+.contact-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.contact-form {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.column {
-    width: 33.333%;
-    display: none; /* Wird via JS gesteuert */
-    padding: 15px;
-    box-sizing: border-box;
+.form-group {
+    display: flex;
+    gap: 15px;
 }
 
-.show {
-    display: block;
-}
-
-.content {
-    background-color: #fff;
-    padding: 0 0 20px 0;
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
     border: 1px solid #eee;
-    text-align: center;
-    transition: transform 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    background-color: #fff;
 }
 
-.content:hover {
-    transform: translateY(-5px);
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #000;
 }
 
-.content img {
+.contact-form .mail-btn {
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    transition: 0.3s;
+}
+
+.contact-form .mail-btn:hover {
+    background-color: #333;
+}
+
+.contact-container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #000;
+    outline: none;
+}
+
+/* Einheitliches Styling für alle Formular-Felder */
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+    width: 100%;
+    height: 55px; /* Einheitliche Höhe für alle Felder */
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    background-color: #fff;
+    box-sizing: border-box; /* Wichtig für exakte Breite */
+    border-radius: 0; /* Kantiger Look wie im Screenshot */
+    -webkit-appearance: none; /* Entfernt Browser-Standard-Styles */
+}
+
+/* Spezielle Anpassung für Textarea */
+.contact-form textarea {
+    height: auto; /* Textarea darf höher sein */
+    padding: 15px;
+}
+
+/* Datepicker & Dropdown Icon Styling */
+#date-picker {
+    color: #666; /* Farbe für das Datum-Placeholder-Format */
+}
+
+/* Browser-Support für das kleine Kalender-Icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/* Sicherstellen, dass die Form-Groups immer gleichmäßig verteilt sind */
+.form-group {
+    display: flex;
+    gap: 15px;
     margin-bottom: 15px;
 }
 
-.content h4 {
-    margin: 15px 0 5px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+@media (max-width: 600px) {
+    .form-group { flex-direction: column; }
 }
 
-.desc {
+.policy-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.policy-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #eee;
+    text-align: center;
+    flex: 1;
+    max-width: 350px;
+}
+
+.policy-box h4 {
+    font-family: 'DolceVita';
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.policy-box p {
     font-size: 0.85rem;
     color: #666;
-    padding: 0 15px;
+    line-height: 1.5;
 }
 
-.mail-btn {
-    display: inline-block;
-    background: #000;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
+.extra-info {
+    font-weight: bold;
     margin-top: 15px;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    transition: background 0.3s;
+    color: #333;
+    font-size: 0.9rem;
 }
 
-.mail-btn:hover {
-    background: #444;
+@media (max-width: 600px) {
+    .policy-container { flex-direction: column; align-items: center; }
 }
 
-/* Footer mit quadratischem Logo */
-footer {
-    text-align: center;
-    padding: 80px 20px;
-    background: #fcfcfc;
+
+/* Layout für die Paket-Inhalte */
+.package-top-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 5px;
+}
+
+.package-top-row .p-item {
+    font-size: 0.95rem;
+}
+
+.acc-divider {
+    border: 0;
     border-top: 1px solid #eee;
+    margin: 15px 0;
 }
 
-.footer-logo img {
-    max-width: 80px;
-    height: auto;
-    margin-bottom: 20px;
-    opacity: 0.7;
+.package-mid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }
 
-.insta-link {
+.p-block strong, .p-note strong {
+    display: block;
+    font-family: 'DolceVita', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.p-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.p-block ul li::before {
+    content: "• ";
+    color: #000;
+}
+
+.p-block p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.package-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.p-note {
+    font-size: 0.85rem;
+    color: #666;
+    max-width: 60%;
+}
+
+.p-extra-price {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.p-extra-price span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+}
+
+/* Mobil-Optimierung */
+@media (max-width: 600px) {
+    .package-top-row, .package-mid-row, .package-bottom-row {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: left;
+    }
+    .p-extra-price { text-align: left; }
+    .p-note { max-width: 100%; }
+}
+
+/* Header Zeile: Dauer links, Preis rechts */
+.package-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.price-right {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Trennlinien */
+.acc-divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+/* Inkl & Optional nebeneinander */
+.package-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Footer: Alles untereinander linksbündig */
+.package-footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.p-extra-price span {
+    font-size: 1.2rem;
     font-weight: bold;
     color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #000;
-    padding-bottom: 2px;
 }
 
-.footer-info {
-    margin-top: 40px;
-    font-size: 0.8rem;
-    color: #aaa;
+/* Mobil-Optimierung: Oben auch untereinander wenn es zu eng wird */
+@media (max-width: 600px) {
+    .package-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .price-right {
+        text-align: left;
+        margin-top: 5px;
+    }
+    .package-info-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* Mobile Anpassung */
-@media screen and (max-width: 900px) {
-    .column { width: 50%; }
+/* Der Bereich für die Infos unter den Trennlinien */
+.package-footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Enger beieinander für weniger Präsenz */
+    text-align: left;
+    margin-top: 10px;
 }
 
-@media screen and (max-width: 600px) {
-    .column { width: 100%; }
-    .main-logo { max-width: 250px; }
+.p-note {
+    font-size: 0.85rem;
+    color: #333;
+}
+
+/* Der schlichte Text für den Aufpreis */
+.p-extra-info-text {
+    font-size: 0.85rem; /* Gleiche Größe wie die Anmerkung */
+    color: #666; /* Etwas blasser/grauer, damit es dezent wirkt */
+    font-weight: normal; /* Keine Fettschrift mehr */
+}
+
+/* Der Bereich für die Infos unter den Trennlinien */
+.package-footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Etwas mehr Luft zwischen Anmerkung und Preis */
+    text-align: left;
+    margin-top: 10px;
+}
+
+/* Das Wort "Anmerkungen" hervorheben */
+.p-note strong {
+    display: block; /* Sorgt dafür, dass der Text "Mindestteilnehmer..." darunter steht */
+    font-family: 'DolceVita', sans-serif;
+    font-size: 1rem; /* Etwas größer als der Rest */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    color: #000;
+}
+
+.p-note {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Der schlichte Text für den Aufpreis */
+.p-extra-info-text {
+    font-size: 0.85rem; 
+    color: #666; 
+    font-weight: normal;
+    font-style: italic; /* Optional: macht es noch etwas dezenter */
+}
+
+.package-image img {
+    width: 100%;       /* Nutzt die Breite des Containers */
+    max-width: 250px;  /* Das Bild wird niemals breiter als 250px */
+    height: auto;      /* Behält das Seitenverhältnis bei */
+    border-radius: 8px; /* Optional: Macht schöne abgerundete Ecken */
+    margin: 10px 0;    /* Etwas Abstand nach oben und unten */
+}
+
+
+/* Äußerer Rahmen */
+.slider-container {
+    position: relative;
+    max-width: 1200px; /* Etwas breiter als die Schiene */
+    margin: 40px auto;
+    padding: 0 60px;   /* Hier wird der Platz für die Pfeile reserviert */
+}
+
+/* Die Schiene, auf der die Karten liegen */
+.slider-track {
+    display: flex;
+    overflow-x: auto; /* Erlaubt wischen auf dem Handy */
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 5px;
+    scrollbar-width: none; /* Versteckt Scrollbar Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.slider-track::-webkit-scrollbar {
+    display: none; /* Versteckt Scrollbar Chrome/Safari */
+}
+
+/* Die einzelne Produktkarte */
+.product-card {
+    min-width: 250px; /* Breite einer Karte */
+    flex: 0 0 auto;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    overflow: hidden; /* Wichtig, damit das Bild nicht über den Rand zoomt */
+}
+
+.product-card:hover {
+    transform: scale(1.2); /* Vergrößert das Bild um 20% */
+    cursor: zoom-in; /* Zeigt dem Nutzer, dass er genauer hinsieht */
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Feste Höhe für Ordnung */
+    object-fit: contain; /* Damit das Bild nicht verzerrt wird */
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    width: 100%;
+    height: 250px;
+    object-fit: contain; 
+    background: #f9f9f9;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+
+/* Wenn ein Element ausgeblendet wird, soll es sanft verschwinden */
+.product-card[style*="display: none"] {
+    opacity: 0;
+}
+
+.product-card[style*="display: block"] {
+    opacity: 1;
+}
+/* Pfeile Design */
+.arrow {
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Perfekt mittig in der Höhe */
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.arrow:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Die Positionen nach ganz außen schieben */
+.arrow.prev { 
+    left: 0; 
+}
+
+.arrow.next { 
+    right: 0; 
+}
+
+/* Mobil: Pfeile weg, da man wischt */
+@media (max-width: 768px) {
+    .slider-container {
+        padding: 0 15px;
+    }
+    .arrow {
+        display: none;
+    }
+}
+
+.product-specs {
+    display: flex;
+    flex-direction: column; /* Untereinander */
+    gap: 4px;
+    margin: 10px 0;
+    font-size: 0.75rem; /* Schön klein und dezent */
+    color: #666;
+    text-align: left; /* Sieht bei Listen oft sauberer aus */
+    padding-left: 10px;
+}
+
+.product-specs span {
+    display: flex;
+    align-items: center;
+}
+
+/* Optional: Ein kleiner Punkt oder Strich davor */
+.product-specs span::before {
+    content: "•";
+    color: #000;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+}
+
+/* Die Beschreibung darunter etwas absetzen */
+.description {
+    font-style: italic;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 5px;
 }
